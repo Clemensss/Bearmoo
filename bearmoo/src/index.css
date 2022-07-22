@@ -13,8 +13,8 @@ code {
 }
 
 body {
-  background-color:rgb(102, 74, 48);
-  color:beige;
+  background-color:rgb(153, 174, 180);
+  color:rgb(2, 6, 7);
 }
 
 #Bearmoo{
@@ -23,26 +23,26 @@ body {
   text-align: center;
   border-width: 1%;
   border-radius: 1%;
-  border:rgb(124, 101, 79);
+  border:rgb(79, 119, 124);
 
 }
 .game{
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
-  margin:0
+  margin:2;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 300px) {
   .game{
     margin-left: 30%;
     margin-right: 30%;
   } 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .game{
-    margin:0
+    margin:10%;
   } 
 }
 .game:focus{
@@ -79,7 +79,7 @@ body {
 }
 
 .message{
-  color: beige;
+color: rgb(2, 39, 48);
   font-size: 25px;
   margin-left: 10%;
   width: 80%;
@@ -99,8 +99,39 @@ body {
    background-color: rgb(53, 71, 69);
  }
 }
+#langChoice {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(to right, rgb(157, 206, 247) ,rgb(153, 174, 180));
+  border-style: groove;
+  width: 80%;
+  height: 40px;
+  -moz-padding-start: calc(10px - 3px);
+  padding-left: 10px;
+  color: rgb(0, 0, 0);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
 
-
+}
+#langChoice:focus{
+  border-style: groove;
+  background-color: transparent;
+}
+#langChoice option{
+  background-color: rgb(178, 195, 206);
+}
+#langChoice::before {
+  font-family: fontello;
+  content: "\f107";
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #fff;
+}
 .playAgain{
   color: beige;
   font-size: 25px;
@@ -158,21 +189,21 @@ body {
   border-radius: 10%;
   border-style: solid;
   border-width: 10%;
-  border-color: rgb(58, 36, 16);
+  border-color: rgb(0, 0, 0);
   flex-grow: 1;
 }
 
 .wordField .Empt {
-  background-color:  rgb(150, 110, 70);
+  background-color:  rgb(48, 144, 199);
 }
 
 .wordField .Full {
-  background-color:  rgb(58, 36, 16);
+  background-color:  rgb(160, 112, 152);
   transition: background 0.5s;
 }
 
 .M {
-  background-color:rgb(192, 132, 20);
+  background-color:rgb(226, 193, 43);
   border-color: rgb(226, 156, 50);
 }
 
@@ -182,9 +213,9 @@ body {
 }
 
 .F{
-  background-color:rgb(153, 59, 22);
+  background-color:rgb(202, 59, 16);
   border-color: rgb(107, 52, 45);
 }
 .E {
-  color:rgb(102, 74, 48);
+  color:rgb(8, 40, 54);
 }

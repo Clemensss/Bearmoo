@@ -3,7 +3,6 @@ import Game from './Game';
 
 const EMPTY = "E"
 const UNK   = "?"
-const NOT_IN_LIST = "word not in list :("
 let isLetter = (c) => {
     if(c.toLowerCase() !== c.toUpperCase() && c.length === 1)
         return true;
@@ -44,8 +43,8 @@ class Bearmoo extends React.Component
                 let answer = game.playRoundGame(word.join(''));
                 
                 if (answer[0] === 2){
-                    this.setState({user_word : new Array(this.props.word_length).fill(UNK)});
-                    this.setState({game_message : NOT_IN_LIST});
+                    this.setState({user_word : new Array(this.props.word_length).fill(UNK),
+                            game_message : this.props.not_in_list});
                 }
 
                 console.log(answer[1]);
@@ -80,7 +79,7 @@ class Bearmoo extends React.Component
                     i++;
 
                 console.log(i);
-                word[i] = e.key;
+                word[i] = e.key.toLowerCase();
                 this.setState({user_word : word});
             }
 
